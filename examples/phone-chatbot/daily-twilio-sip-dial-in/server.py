@@ -40,6 +40,8 @@ async def handle_call(request: Request):
         form_data = await request.form()
         data = dict(form_data)
 
+        print(f"Data from Twilio webhook {data}")
+
         # Extract call ID (required to forward the call later)
         call_sid = data.get("CallSid")
         if not call_sid:

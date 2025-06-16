@@ -98,7 +98,7 @@ async def run_bot(room_url: str, token: str, call_id: str, sip_uri: str) -> None
             allow_interruptions=True  # Enable barge-in so callers can interrupt the bot
         ),
     )
-
+    
     # Handle participant joining
     @transport.event_handler("on_first_participant_joined")
     async def on_first_participant_joined(transport, participant):
